@@ -85,11 +85,14 @@
 
     <script>
         const elements = [
-            { symbol: "H", name: "Hydrogen", atomicNumber: 1 },
-            { symbol: "He", name: "Helium", atomicNumber: 2 },
-            { symbol: "Li", name: "Lithium", atomicNumber: 3 },
-            { symbol: "Be", name: "Beryllium", atomicNumber: 4 },
-            { symbol: "B", name: "Boron", atomicNumber: 5 }
+            { symbol: "H", name: "Hydrogen", atomicNumber: 1, mass:"1.0078 u"},
+            { symbol: "He", name: "Helium", atomicNumber: 2, mass:"4.0026 u"},
+            { symbol: "Li", name: "Lithium", atomicNumber: 3, mass:"6.9410 u" },
+            { symbol: "Be", name: "Beryllium", atomicNumber: 4,mass:"9.0122 u" },
+            { symbol: "B", name: "Boron", atomicNumber: 5,mass:"10.811 u" },
+            { symbol: "C", name: "Carbon", atomicNumber: 6,mass:"12.011 u" },
+            { symbol: "N", name: "Nitrogen", atomicNumber: 7,mass:"14.007 u" },
+            { symbol: "O", name: "Oxygen", atomicNumber: 8,mass:"15.999 u" }
         ];
 
         let currentIndex = 0;
@@ -99,7 +102,8 @@
             document.getElementById("symbol").textContent = element.symbol;
             document.getElementById("info").innerHTML = `
                 Name: ${element.name}<br>
-                Atomic Number: ${element.atomicNumber}
+                Atomic Number: ${element.atomicNumber}<br>
+                Atomic Mass: ${element.mass}
             `;
         }
 
